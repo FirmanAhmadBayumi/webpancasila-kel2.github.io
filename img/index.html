@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kelompok 2</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<style>
+    .big-title {
+        font-size: 30px;
+    }
+
+    .myTeams button {
+        color: #eee;
+        background: #191b1d;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 8px 30px;
+        border: 2px solid #bcc7ce;
+        border-radius: 30px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .myTeams button:hover {
+        background: transparent;
+        border: 2px solid #234053;
+        color: #eee;
+        transition: 0.4s;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h3 class="logo">Pendidikan<span>Pancasila</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+
+        <h1 class="big-title translate" data-speed="0.1">Pancasila Dalam Kajian Sejarah Bangsa</h1>
+
+        <img src="img/baseimage.jpg" class="mountain1 translate" data-speed="-0.2" alt="">
+        <img src="img/layerimage1.png" class="mountain2 translate" data-speed="0.4" alt="">
+        <img src="img/imagelayer3.png" class="mountain3 translate" data-speed="0.3" alt="">
+    </header>
+
+    <section>
+        <div class="shadow"></div>
+
+        <div class="container">
+            <div class="content opacity">
+                <h3 class="title">
+                    Pancasila
+                    <div class="border"></div>
+                </h3>
+                <p class="text">Pancasila sebagai dasar negara dari NKRI yang telah diterima secara luas dan telah
+                    bersifat final.
+                    Arus Sejarah memperlihatkan dengan nyata bahwa semua bangsa memrlukan konsepsi dan cita-cita</p>
+                <p class="text">Sejarah Pancasila Bangsa Indonesia di antaranya yaitu:
+                <ol>
+                    <li>Era Pra Kemerdekaan</li>
+                    <li>Era Kemerdekaan</li>
+                    <li>Era Orde Lama</li>
+                    <li>Era Orde Baru</li>
+                    <li>Era Reformasi</li>
+                </ol>
+                </p>
+            </div>
+
+            <div class="imgContainer opacity">
+                <img src="img/Pngtreepancasila_emblem_with_icons_6066402.png" alt="">
+            </div>
+            <div class="myTeams">
+                <button href="" id="nextButton">Next Page</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // Fungsi untuk mengaktifkan animasi perpindahan halaman
+        function animatePageTransition() {
+            // Gunakan gsap untuk animasi fade out
+            gsap.to("body", {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: function () {
+                    // Setelah animasi fade out selesai, pindah ke halaman berikutnya
+                    window.location.href = "hal2.html"; // Ganti dengan URL halaman berikutnya
+                },
+            });
+        }
+
+        // Tambahkan event listener untuk tombol "Next"
+        document.getElementById("nextButton").addEventListener("click", animatePageTransition);
+    </script>
+
+</body>
+
+</html>
